@@ -80,7 +80,7 @@ function generateDocName(){
     }
     console.log(DocType.options[DocType.selectedIndex].text)
     var vDocType = DocType.options[DocType.selectedIndex].text
-    if (DocType.description.includes("dwg")) {
+    if (vDocType.includes("dwg")) {
         console.log(`Partial match '${varDocNumber_noNum}' found in the array.`);
         const partialMatchesArray = PartialMatch.map(match => match.replace(/\.[^.]+$/, ''));
         console.log('Partial matches array:', partialMatchesArray);
@@ -103,7 +103,7 @@ function generateDocName(){
         console.log('Next number with padded zeros and fixed length 3:', paddedNextNumber);
 
         newDrawingNumber = paddedNextNumber
-    } else if (vDocType.value.includes("Doc")){
+    } else if (vDocType.includes("Doc")){
         console.log(`No partial match '${varDocNumber_noNum}' found in the array.`);
         newDrawingNumber = "00"
     }
