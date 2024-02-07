@@ -34,56 +34,7 @@
         <i onclick="openNav()" class="gg-menu-grid-r"></i>
       </div>
         <!-- Side Bar -->
-      <div>
-        <div id="mySidenav" class="sidenav">
-          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-          <a href="../pages/home.html">Home</a>
-          <a href="../pages/projectresources.html">Project Resources</a>
-          <a href="../pages/dashboards.html">Dashboards</a>
-          <a href="../pages/inductions.html">Inductions</a>
-          <a href="../pages/sitenoticeboard.html">Site Notice Board</a>
-          <a href="../pages/training.html">Training</a>
-          <a onclick="openInNewTab('//acc.autodesk.eu/build/forms/projects/76c59b97-feaf-413c-9bd0-43cf8aaa3133/field-reports/all')">Site Forms</a>
-          <a href="../pages/faqs.html">FAQs</a>
-          <a href="../pages/lessonslearnt.html">Lessons Learnt</a>
-          <a href="../pages/feedback.html">Feedback</a>
-        </div>
-        <script>
-          /* Set the width of the side navigation to 250px */
-          function openInNewTab(url) {
-            var win = window.open(url, '_blank');
-            win.focus();
-          }
-          function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-          }
-      
-          /* Set the width of the side navigation to 0 */
-          function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
-          }
-          window.addEventListener('DOMContentLoaded', function() {
-            function updateImage() {
-                var screenWidth = window.innerWidth;
-                var imageElement = document.getElementById('headerlogo');
 
-                if (screenWidth < 700) {
-                    imageElement.src = "../Assets/media/Keltbray-logo_single.png";
-                    imageElement.alt = 'Small Image';
-                } else {
-                    imageElement.src = "../Assets/media/Keltbray logo_Main_min clear space.png";
-                    imageElement.alt = 'Large Image';
-                }
-            }
-
-            // Initial call
-            updateImage();
-
-            // Add event listener for window resize
-            window.addEventListener('resize', updateImage);
-          });
-        </script>
-      </div>
     </div>
 
   </header>
@@ -169,7 +120,7 @@
 
 <div class="addeddepth"></div>
 <footer class="wrapperfooter">
-<img alt="" class="logoF" src="../Assets/media/Keltbray logo_Wht_Wht box_min clear space.png">
+<img alt="" class="logoF" src="./Assets/media/Keltbray logo_Wht_Wht box_min clear space.png">
 <h2>Infrastructure PMO</h2>
 </footer>
 </body>
