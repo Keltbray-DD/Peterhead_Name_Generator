@@ -78,6 +78,8 @@ function generateDocName(){
         console.log(`No partial match '${varDocNumber_noNum}' found in the array.`);
         newNumber = "001"
     }
+
+    
     console.log(DocType.options[DocType.selectedIndex].text)
     var vDocType = DocType.options[DocType.selectedIndex].text
     if (vDocType.includes("dwg")) {

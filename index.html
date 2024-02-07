@@ -6,40 +6,28 @@
     <link rel="stylesheet" href="../Assets/css/largegrid.css">
     <link rel="stylesheet" href="../Assets/css/forms.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="../../Assets/media/Keltbray-logo_single.png" type="image/x-icon">
+    <link rel="icon" href="../Assets/media/Keltbray-logo_single.png" type="image/x-icon">
     <link href="https://unpkg.com/css.gg@2.0.0/icons/css/menu.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="../js/formsubmission.js"></script>
     <script src="../js/getinfo.js"></script>
     <script src="../js/getACCData.js"></script>
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
     <title>Peterhead Project Portal - File Name Generator</title>
-=======
-    <title>SPEN Program Project Portal - File Name Generator</title>
->>>>>>> 06b1d78a5559cf4e77fa56345774c7a9ca8ba4ef
-=======
-    <title>SHEAF Project Portal - File Name Generator</title>
->>>>>>> 34995716c47e24d0a477dc7ed37299a008004dbf
+
 
 </head>
-<body class="container" onload="variableSet(), getFAQinfo()">
+<body class="container">
   <header class="wrapperheader">
     <div class="colheader">
       <div class="column left">
         <img alt="" onclick="openNav()" id="headerlogo" class="logoH" src="../Assets/media/Keltbray logo_Main_min clear space.png">
       </div>
       <div class="column center">
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         <h1>Peterhead Project Portal</h1>
-=======
-        <h1>SPEN Program Project Portal</h1>
->>>>>>> 06b1d78a5559cf4e77fa56345774c7a9ca8ba4ef
-=======
-        <h1>SHEAF Project Portal</h1>
->>>>>>> 34995716c47e24d0a477dc7ed37299a008004dbf
+
         <h2>File Name Generator</h2>
       </div>
       <div class="column right">
@@ -111,42 +99,44 @@
              </div>
            </div>
          </li>
-         <!-- Project PIN Input-->
-         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Project PIN </label>
-             <div id="cid_5" class="form-input-wide" data-layout="full">
-               <select class="form-dropdown" id="ProjectPin_input" name="" data-component="ProjectRole" aria-label="Project PIN">
-               </select> </div>
-           </li>
+        <!-- Project PIN Input-->
+        <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Contractor Codes </label>
+            <div id="cid_5" class="form-input-wide" data-layout="full">
+              <select class="form-dropdown" id="ProjectPin_input" name="" data-component="ProjectRole" aria-label="Project PIN">
+              </select> </div>
+        </li>
+        <!-- Spatial Input-->
+        <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Location Code </label>
+        <div id="cid_5" class="form-input-wide" data-layout="full">
+          <select class="form-dropdown" id="Spatial_input" name="" data-component="ProjectRole" aria-label="Spatial">
+          </select> </div>
+        </li>
+        <!-- Function Input-->
+        <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Function </label>
+        <div id="cid_5" class="form-input-wide" data-layout="full">
+          <select class="form-dropdown" id="Function_input" name="" data-component="ProjectRole" aria-label="Function">
+          </select> </div>
+        </li>
+        <!-- Discipline Input-->
+        <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Doc-Dwg Type </label>
+          <div id="cid_5" class="form-input-wide" data-layout="full">
+            <select class="form-dropdown" id="DocType_input" name="" data-component="ProjectRole" aria-label="Discipline">
+            </select> </div>
+        </li>
+        <!-- Discipline Input-->
+        <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Subject &amp; Discipline Code </label>
+        <div id="cid_5" class="form-input-wide" data-layout="full">
+          <select class="form-dropdown" id="Discipline_input" name="" data-component="ProjectRole" aria-label="Discipline">
+          </select> </div>
+        </li>
          <!-- Originator Input-->
-         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Originator </label>
+         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Originator Code </label>
              <div id="cid_5" class="form-input-wide" data-layout="full">
                <select class="form-dropdown" id="Originator_input" name="" data-component="ProjectRole" aria-label="Originator">
                </select> </div>
-           </li>
-         <!-- Function Input-->
-         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Function </label>
-             <div id="cid_5" class="form-input-wide" data-layout="full">
-               <select class="form-dropdown" id="Function_input" name="" data-component="ProjectRole" aria-label="Function">
-               </select> </div>
-           </li>
-         <!-- Spatial Input-->
-         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Spatial </label>
-             <div id="cid_5" class="form-input-wide" data-layout="full">
-               <select class="form-dropdown" id="Spatial_input" name="" data-component="ProjectRole" aria-label="Spatial">
-               </select> </div>
-           </li>
-         <!-- Form Input-->
-         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Form </label>
-             <div id="cid_5" class="form-input-wide" data-layout="full">
-               <select class="form-dropdown" id="Form_input" name="" data-component="ProjectRole" aria-label="Form">
-               </select> </div>
-           </li>
-         <!-- Discipline Input-->
-         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Disicpline </label>
-           <div id="cid_5" class="form-input-wide" data-layout="full">
-             <select class="form-dropdown" id="Discipline_input" name="" data-component="ProjectRole" aria-label="Discipline">
-             </select> </div>
-         </li>
+          </li>
+
+
          <!-- Generate Button -->
          <li id="cid_2" class="form-input-wide" data-layout="full">
              <div data-align="auto" class="form-buttons-wrapper2 form-buttons-auto   jsTest-button-wrapperField">
