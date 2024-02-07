@@ -1,0 +1,277 @@
+*{
+  font-family: Arial, Helvetica, sans-serif;
+}
+.addeddepth{
+height: 100px;
+}
+.container {
+  max-width: 1280px;
+  margin: auto; /* Center the container */
+}
+
+.maintext{
+text-align: center;
+}
+/* Style the header with a grey background and some padding */
+.colheader {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 5px 0px;
+background-color: #f1f1f1;
+overflow: hidden;
+}
+
+.column {
+flex: 1;
+text-align: center;
+}
+
+.column.left {
+flex-basis: 25%;
+}
+
+.column.center {
+flex-basis: 50%;
+}
+
+.column.right {
+flex-basis: 25%;
+}
+
+.wrapperheader {
+  width: 100%;
+  position: relative;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1); /* This adds a shadow */
+}
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+img.logoH {
+  float: left;
+  font-weight: bold;
+  height: auto;
+  display: flex;
+  width: 100%;
+}
+img.logoF {
+  float: left;
+  font-weight: bold;
+  height: auto;
+  display: flex;
+  max-width: 200px;
+}  
+header h1 {
+  text-align: center;
+  position: flex;
+  width: 100%;
+  top: 50%;
+  margin: auto;
+  /*transform: translateY(-150%);*/
+  
+}
+header h2 {
+  text-align: center;
+  position: flex;
+  width: 100%;
+  top: 50%;
+  margin: auto;
+  /*transform: translateY(-30%);*/
+}
+/* Change the background color on mouse-over */
+
+footer{
+  position: fixed;
+  bottom: 0;
+  background-color: black;
+  height: 50px;
+  width: 100%;
+  margin-top: auto;
+}
+.wrapperfooter {
+  max-width: 1280px;
+}
+footer h2{
+color: white;
+float:left;
+height: inherit;
+vertical-align: middle;
+font-size: 18px;
+}
+body{
+  background-color: #bebfbc;
+
+}
+.full-height {
+    height: 100%;
+  }
+h3{
+    text-align: center;
+}
+
+div img, div iframe{
+    max-width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    object-fit: contain;
+    position: relative;
+}
+
+.inductionsContainer{
+    max-width: 1000px;
+    margin: auto;
+    background-color: white;
+    padding: 16px;
+    border-radius: 0 0 15px 15px;
+}
+/* Slideshow container */
+.slideshow-container {
+  max-width: 900px;
+  max-height: auto;
+  position: relative;
+  margin: auto;
+
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+  position: relative;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 5px;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+/* Caption text */
+.text {
+  color: #000000;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: relative;
+  width: 100%;
+  text-align: center;
+  display: block;
+}
+
+/* Number text (1/18 etc) */
+.numbertext {
+  color: #000000;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dotscontainer{
+    text-align:center;
+    position: relative;
+    width: 100%;
+    display: block;
+    padding-bottom: 8px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+.signoffContainer{
+    text-align: center;
+    height: 400px;
+}
+
+.signoffButtonContainer{
+    padding: 16px;
+}
+
+.signoffButton{
+    display: flex;
+    margin: auto;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 3em;
+    width: auto;
+    min-width: 128px;
+    color: #2c3345;
+    font-size: 1em;
+    border-radius: 4px;
+    background-color: transparent;
+    border: 1px solid;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: inherit;
+    display:none;
+}
+
+.form-textbox{
+    background-color: #fff;
+    border-color: #b8bdc9;
+    color: #2c3345;
+    font-size: 1em;
+    border-radius: 4px;
+    border-width: 1px;
+    border-style: solid;
+    font-family: inherit;
+    padding: 0 0.625em;
+    margin: 10px;
+    height: 40px;
+}
+.formFooter-button,.submit-button {
+    background-color: #18bd5b;
+    border-color: #18bd5b;
+    color: #fff
+}
+
+.formFooter-button:hover,.submit-button:hover {
+    background-color: #16aa52
+}

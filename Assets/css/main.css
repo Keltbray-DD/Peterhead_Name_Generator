@@ -1,0 +1,403 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.addeddepth{
+  height: 100px;
+}
+.container {
+    max-width: 1280px;
+    margin: auto; /* Center the container */
+  }
+
+.maintext{
+  text-align: center;
+  padding: 0px 20px;
+}
+/* Style the header with a grey background and some padding */
+.colheader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0px;
+  background-color: #f1f1f1;
+  overflow: hidden;
+}
+
+.column {
+  flex: 1;
+  text-align: center;
+}
+
+.column.left {
+  flex-basis: 25%;
+}
+
+.column.center {
+  flex-basis: 50%;
+}
+
+.column.right {
+  flex-basis: 25%;
+}
+
+.wrapperheader {
+    width: 100%;
+    position: relative;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1); /* This adds a shadow */
+}
+/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
+img.logoH {
+    float: left;
+    font-weight: bold;
+    
+    display: flex;
+    width: 100%;
+  }
+img.logoF {
+    float: left;
+    font-weight: bold;
+    
+    display: flex;
+    width: 200px;
+  }  
+header h1 {
+    text-align: center;
+    position: flex;
+    width: 100%;
+    top: 50%;
+    margin: auto;
+    /*transform: translateY(-150%);*/
+    
+  }
+header h2 {
+    text-align: center;
+    position: flex;
+    width: 100%;
+    top: 50%;
+    margin: auto;
+    font-weight:normal;
+    /*transform: translateY(-30%);*/
+}
+  /* Change the background color on mouse-over */
+
+footer{
+    position: fixed;
+    bottom: 0;
+    background-color: black;
+    height: 50px;
+    width: 100%;
+    margin-top: auto;
+}
+.wrapperfooter {
+    max-width: 1280px;
+}
+footer h2{
+  color: white;
+  float:left;
+  height: inherit;
+  vertical-align: middle;
+  font-size: 18px;
+}
+body{
+    background-color: #bebfbc;
+
+}
+.full-height {
+    height: 100%;
+  }
+h3{
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(100px, 1fr));
+    grid-gap: 15px;
+    grid-row-gap: 25px;
+    margin: 20px auto;
+    max-width: 800px; /* Added to limit the maximum width of the grid */
+    padding: 0px 20px;
+    position: relative;
+
+  }
+
+  .grid-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+    height: 90px;
+    min-width: 100px;
+    max-width: 300px;
+    position: relative; /* Added for positioning */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* This adds a shadow */
+    display: flex; /* Enable flexbox */
+    justify-content: left; /* Center horizontally */
+    align-items: top; /* Center vertically */
+    transition: background-color 0.3s, transform 0.3s; /* Add transition */
+  }
+  .grid-item:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+  }
+  
+  .button-container {
+    position: absolute;
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%; /* 10% less than the width of the grid item */
+    text-align: center;
+    
+  }
+
+  .button-container button {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    /* background-color: #007bff;*/
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  .button-1 {
+    background-color: #28a745;
+  }
+
+  .button-2 {
+    background-color: #2b53a0;
+  }
+
+  .button-3 {
+    background-color: #e40313;
+  }
+
+
+/* The side navigation menu */
+.sidenav {
+  height: 100%; /* 100% Full-height */
+  width: 0; /* 0 width - change this with JavaScript */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Stay on top */
+  top: 0; /* Stay at the top */
+  left: 0;
+  background-color: #111; /* Black*/
+  overflow-x: hidden; /* Disable horizontal scroll */
+  padding-top: 60px; /* Place content 60px from the top */
+  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
+}
+
+/* The navigation menu links */
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  text-align: left;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+  transition: margin-left .5s;
+  padding: 20px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.gg-menu-grid-r {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,2));
+  width: 16px;
+  height: 16px;
+  float: right;
+  margin: 30px 24px;
+ }
+ 
+ .gg-menu-grid-r::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  background: currentColor;
+  box-shadow:
+  0 6px 0,
+  6px 6px 0,
+  12px 6px 0,
+  6px 12px 0,
+  12px 12px 0,
+  6px 0 0,
+  12px 0 0,
+  0 12px 0
+  ;
+ } 
+
+ .startbutton {
+  display: inline;
+  text-align: center;
+  border-radius: 4px;
+  background-color: #1e69f4;
+  border: none;
+  color: #FFFFFF;
+  font-size: 20px;
+  padding: 20px;
+  max-width: 400px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: auto;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1); /* This adds a shadow */
+}
+
+.startbutton span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.startbutton span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.startbutton:hover span {
+  padding-right: 25px;
+}
+
+.startbutton:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-gap: 15px;
+    grid-row-gap: 25px;
+    margin: 20px auto;
+    max-width: 800px; /* Added to limit the maximum width of the grid */
+  }
+}
+
+@media only screen and (max-width: 700px) {
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    grid-gap: 15px;
+    grid-row-gap: 25px;
+    margin: 20px auto;
+    max-width: 800px; /* Added to limit the maximum width of the grid */
+  }
+  header h1 {
+    text-align: center;
+    position: flex;
+    width: 100%;
+    top: 50%;
+    margin: auto;
+    font-size: 5vw;
+    /*transform: translateY(-150%);*/
+    
+  }
+  header h2 {
+    text-align: center;
+    position: flex;
+    width: 100%;
+    top: 50%;
+    margin: auto;
+    font-weight:normal;
+    font-size: 4vw;
+  }
+    /*transform: translateY(-30%);*/
+  .weatherSmall{
+    max-height: 483px;
+    padding: 8.8px 7.92px;
+  }
+  img.logoH {
+    float: left;
+    font-weight: bold;
+    display: flex;
+    width: 60%;
+  }
+}
+
+.wrapperkeltbray{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0px;
+  overflow: hidden;
+  width: 100%;
+  max-width: 840px;
+  margin: auto;
+}
+
+.columnkel {
+  flex: 1;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.columnkel.left {
+  flex-basis: 33%;
+  max-width: 30%;
+}
+
+.columnkel.center {
+  flex-basis: 33%;
+  max-width: 20%;
+  border-radius: 180px;
+  padding: 10px;
+}
+
+.columnkel.right {
+  flex-basis: 33%;
+  max-width: 30%;
+}
+
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+fa fa-close{
+  
+}

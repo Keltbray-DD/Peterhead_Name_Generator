@@ -1,0 +1,187 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Assets/css/main.css">
+    <link rel="stylesheet" href="../Assets/css/largegrid.css">
+    <link rel="stylesheet" href="../Assets/css/forms.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../../Assets/media/Keltbray-logo_single.png" type="image/x-icon">
+    <link href="https://unpkg.com/css.gg@2.0.0/icons/css/menu.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="../js/formsubmission.js"></script>
+    <script src="../js/getinfo.js"></script>
+    <script src="../js/getACCData.js"></script>
+
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <title>Peterhead Project Portal - File Name Generator</title>
+=======
+    <title>SPEN Program Project Portal - File Name Generator</title>
+>>>>>>> 06b1d78a5559cf4e77fa56345774c7a9ca8ba4ef
+=======
+    <title>SHEAF Project Portal - File Name Generator</title>
+>>>>>>> 34995716c47e24d0a477dc7ed37299a008004dbf
+
+</head>
+<body class="container" onload="variableSet(), getFAQinfo()">
+  <header class="wrapperheader">
+    <div class="colheader">
+      <div class="column left">
+        <img alt="" onclick="openNav()" id="headerlogo" class="logoH" src="../Assets/media/Keltbray logo_Main_min clear space.png">
+      </div>
+      <div class="column center">
+<<<<<<< HEAD
+<<<<<<< HEAD
+        <h1>Peterhead Project Portal</h1>
+=======
+        <h1>SPEN Program Project Portal</h1>
+>>>>>>> 06b1d78a5559cf4e77fa56345774c7a9ca8ba4ef
+=======
+        <h1>SHEAF Project Portal</h1>
+>>>>>>> 34995716c47e24d0a477dc7ed37299a008004dbf
+        <h2>File Name Generator</h2>
+      </div>
+      <div class="column right">
+        <i onclick="openNav()" class="gg-menu-grid-r"></i>
+      </div>
+        <!-- Side Bar -->
+      <div>
+        <div id="mySidenav" class="sidenav">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+          <a href="../pages/home.html">Home</a>
+          <a href="../pages/projectresources.html">Project Resources</a>
+          <a href="../pages/dashboards.html">Dashboards</a>
+          <a href="../pages/inductions.html">Inductions</a>
+          <a href="../pages/sitenoticeboard.html">Site Notice Board</a>
+          <a href="../pages/training.html">Training</a>
+          <a onclick="openInNewTab('//acc.autodesk.eu/build/forms/projects/76c59b97-feaf-413c-9bd0-43cf8aaa3133/field-reports/all')">Site Forms</a>
+          <a href="../pages/faqs.html">FAQs</a>
+          <a href="../pages/lessonslearnt.html">Lessons Learnt</a>
+          <a href="../pages/feedback.html">Feedback</a>
+        </div>
+        <script>
+          /* Set the width of the side navigation to 250px */
+          function openInNewTab(url) {
+            var win = window.open(url, '_blank');
+            win.focus();
+          }
+          function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+          }
+      
+          /* Set the width of the side navigation to 0 */
+          function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+          }
+          window.addEventListener('DOMContentLoaded', function() {
+            function updateImage() {
+                var screenWidth = window.innerWidth;
+                var imageElement = document.getElementById('headerlogo');
+
+                if (screenWidth < 700) {
+                    imageElement.src = "../Assets/media/Keltbray-logo_single.png";
+                    imageElement.alt = 'Small Image';
+                } else {
+                    imageElement.src = "../Assets/media/Keltbray logo_Main_min clear space.png";
+                    imageElement.alt = 'Large Image';
+                }
+            }
+
+            // Initial call
+            updateImage();
+
+            // Add event listener for window resize
+            window.addEventListener('resize', updateImage);
+          });
+        </script>
+      </div>
+    </div>
+
+  </header>
+
+  <section class="formcontainer">
+    <form class="jotform-form" id="ACC_FileNo_Generator" >
+     <div class="form-all">
+       <ul class="form-section page-section">
+         <li id="cid_1" class="form-input-wide" data-type="control_head">
+           <div class="form-header-group  header-large">
+             <div class="header-text httal htvam">
+               <h1 id="header_1" class="form-header" data-component="header">ACC File Name Generator</h1>
+             </div>
+           </div>
+         </li>
+         <!-- Project PIN Input-->
+         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Project PIN </label>
+             <div id="cid_5" class="form-input-wide" data-layout="full">
+               <select class="form-dropdown" id="ProjectPin_input" name="" data-component="ProjectRole" aria-label="Project PIN">
+               </select> </div>
+           </li>
+         <!-- Originator Input-->
+         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Originator </label>
+             <div id="cid_5" class="form-input-wide" data-layout="full">
+               <select class="form-dropdown" id="Originator_input" name="" data-component="ProjectRole" aria-label="Originator">
+               </select> </div>
+           </li>
+         <!-- Function Input-->
+         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Function </label>
+             <div id="cid_5" class="form-input-wide" data-layout="full">
+               <select class="form-dropdown" id="Function_input" name="" data-component="ProjectRole" aria-label="Function">
+               </select> </div>
+           </li>
+         <!-- Spatial Input-->
+         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Spatial </label>
+             <div id="cid_5" class="form-input-wide" data-layout="full">
+               <select class="form-dropdown" id="Spatial_input" name="" data-component="ProjectRole" aria-label="Spatial">
+               </select> </div>
+           </li>
+         <!-- Form Input-->
+         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Form </label>
+             <div id="cid_5" class="form-input-wide" data-layout="full">
+               <select class="form-dropdown" id="Form_input" name="" data-component="ProjectRole" aria-label="Form">
+               </select> </div>
+           </li>
+         <!-- Discipline Input-->
+         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Disicpline </label>
+           <div id="cid_5" class="form-input-wide" data-layout="full">
+             <select class="form-dropdown" id="Discipline_input" name="" data-component="ProjectRole" aria-label="Discipline">
+             </select> </div>
+         </li>
+         <!-- Generate Button -->
+         <li id="cid_2" class="form-input-wide" data-layout="full">
+             <div data-align="auto" class="form-buttons-wrapper2 form-buttons-auto   jsTest-button-wrapperField">
+               <button type="button" id="generate_btn"  class="form-submit-button submit-button jf-form-buttons jsTest-submitField" onclick="generateDocName()">Generate File Name</button>
+             </div>
+         </li>
+         <!-- Document Number-->
+         <li class="form-line" data-type="control_email" id="id_7"><label class="form-label form-label-top form-label-auto" id="label_7" for="input_7" aria-hidden="false"> Generated File Name </label>
+          <input type="text" id="DocNumber" name="DocNumber" class="form-textbox" size="15" value="" data-component="last" aria-labelledby="label_6 sublabel_6_last" readonly>
+
+          </li>
+       </ul>
+     </div>
+   </form>
+</section>
+
+  <script>
+
+    
+
+  function on() {
+  document.getElementById("overlay").style.display = "block";
+  }
+  function off() {
+    document.getElementById("overlay").style.display = "none";
+  }
+
+
+  </script>
+
+<div class="addeddepth"></div>
+<footer class="wrapperfooter">
+<img alt="" class="logoF" src="../Assets/media/Keltbray logo_Wht_Wht box_min clear space.png">
+<h2>Infrastructure PMO</h2>
+</footer>
+</body>
+
+</html>
