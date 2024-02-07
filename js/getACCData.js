@@ -78,36 +78,43 @@ function generateDocName(){
         console.log(`No partial match '${varDocNumber_noNum}' found in the array.`);
         newNumber = "001"
     }
+    const varDocNumber_NoSheetNumber = varDocNumber_noNum+"-"+newNumber
+    const PartialMatch2 = filelist.filter(item => item.includes(varDocNumber_NoSheetNumber));
 
-    
     console.log(DocType.options[DocType.selectedIndex].text)
     var vDocType = DocType.options[DocType.selectedIndex].text
-    if (vDocType.includes("dwg")) {
-        console.log(`Partial match '${varDocNumber_noNum}' found in the array.`);
-        const partialMatchesArray = PartialMatch.map(match => match.replace(/\.[^.]+$/, ''));
-        console.log('Partial matches array:', partialMatchesArray);
 
-        // Extract the numbers from the filenames
-        const numbers = partialMatchesArray.map(filename => {
-            const match = filename.match(/(\d+)$/);
-            return match ? parseInt(match[1], 10) : null;
-        });
+    if (PartialMatch2.length >=1) {
+        if (vDocType.includes("dwg")) {
+            console.log(`Partial match '${varDocNumber_noNum}' found in the array.`);
+            const partialMatchesArray = PartialMatch.map(match => match.replace(/\.[^.]+$/, ''));
+            console.log('Partial matches array:', partialMatchesArray);
 
-        // Find the maximum number
-        const maxNumber = Math.max(...numbers);
+            // Extract the numbers from the filenames
+            const numbers = partialMatchesArray.map(filename => {
+                const match = filename.match(/(\d+)$/);
+                return match ? parseInt(match[1], 10) : null;
+            });
 
-        // Calculate the next number
-        const nextNumber = maxNumber + 1;
+            // Find the maximum number
+            const maxNumber = Math.max(...numbers);
 
-        // Pad the next number with zeros and set the fixed length to 6
-        const paddedNextNumber = String(nextNumber).padStart(2, '0');
+            // Calculate the next number
+            const nextNumber = maxNumber + 1;
 
-        console.log('Next number with padded zeros and fixed length 3:', paddedNextNumber);
+            // Pad the next number with zeros and set the fixed length to 2
+            const paddedNextNumber = String(nextNumber).padStart(2, '0');
 
-        newDrawingNumber = paddedNextNumber
-    } else if (vDocType.includes("Doc")){
+            console.log('Next number with padded zeros and fixed length 2:', paddedNextNumber);
+
+            newDrawingNumber = paddedNextNumber;
+
+    } }else if (vDocType.includes("Doc")){
         console.log(`No partial match '${varDocNumber_noNum}' found in the array.`);
         newDrawingNumber = "00"
+    
+    }else{
+        newDrawingNumber = "01"
     }
 
     const varDocNumber_Full = varDocNumber_noNum+"-"+newNumber+"-"+newDrawingNumber
