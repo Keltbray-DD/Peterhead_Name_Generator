@@ -1,403 +1,299 @@
-*{
-    font-family: Arial, Helvetica, sans-serif;
-}
-.addeddepth{
-  height: 100px;
-}
-.container {
-    max-width: 1280px;
-    margin: auto; /* Center the container */
-  }
-
-.maintext{
-  text-align: center;
-  padding: 0px 20px;
-}
-/* Style the header with a grey background and some padding */
-.colheader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 0px;
-  background-color: #f1f1f1;
-  overflow: hidden;
-}
-
-.column {
-  flex: 1;
-  text-align: center;
-}
-
-.column.left {
-  flex-basis: 25%;
-}
-
-.column.center {
-  flex-basis: 50%;
-}
-
-.column.right {
-  flex-basis: 25%;
-}
-
-.wrapperheader {
-    width: 100%;
-    position: relative;
-    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1); /* This adds a shadow */
-}
-/* Style the logo link (notice that we set the same value of line-height and font-size to prevent the header to increase when the font gets bigger */
-img.logoH {
-    float: left;
-    font-weight: bold;
-    
-    display: flex;
-    width: 100%;
-  }
-img.logoF {
-    float: left;
-    font-weight: bold;
-    
-    display: flex;
-    width: 200px;
-  }  
-header h1 {
-    text-align: center;
-    position: flex;
-    width: 100%;
-    top: 50%;
-    margin: auto;
-    /*transform: translateY(-150%);*/
-    
-  }
-header h2 {
-    text-align: center;
-    position: flex;
-    width: 100%;
-    top: 50%;
-    margin: auto;
-    font-weight:normal;
-    /*transform: translateY(-30%);*/
-}
-  /* Change the background color on mouse-over */
-
-footer{
-    position: fixed;
-    bottom: 0;
-    background-color: black;
-    height: 50px;
-    width: 100%;
-    margin-top: auto;
-}
-.wrapperfooter {
-    max-width: 1280px;
-}
-footer h2{
-  color: white;
-  float:left;
-  height: inherit;
-  vertical-align: middle;
-  font-size: 18px;
-}
-body{
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
     background-color: #bebfbc;
-
-}
-.full-height {
-    height: 100%;
-  }
-h3{
-    text-align: center;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: repeat(4, minmax(100px, 1fr));
-    grid-gap: 15px;
-    grid-row-gap: 25px;
-    margin: 20px auto;
-    max-width: 800px; /* Added to limit the maximum width of the grid */
-    padding: 0px 20px;
-    position: relative;
-
-  }
-
-  .grid-item {
-    background-color: #f0f0f0;
-    padding: 20px;
-    text-align: left;
-    font-size: 20px;
-    font-weight: bold;
-    height: 90px;
-    min-width: 100px;
-    max-width: 300px;
-    position: relative; /* Added for positioning */
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* This adds a shadow */
-    display: flex; /* Enable flexbox */
-    justify-content: left; /* Center horizontally */
-    align-items: top; /* Center vertically */
-    transition: background-color 0.3s, transform 0.3s; /* Add transition */
-  }
-  .grid-item:hover {
-    background-color: #ffffff;
-    transform: scale(1.05);
-  }
-  
-  .button-container {
-    position: absolute;
-    bottom: -10%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80%; /* 10% less than the width of the grid item */
-    text-align: center;
     
-  }
-
-  .button-container button {
-    width: 100%;
-    padding: 10px;
-    font-size: 18px;
-    /* background-color: #007bff;*/
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  .button-1 {
-    background-color: #28a745;
-  }
-
-  .button-2 {
-    background-color: #2b53a0;
-  }
-
-  .button-3 {
-    background-color: #e40313;
-  }
-
-
-/* The side navigation menu */
-.sidenav {
-  height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Stay on top */
-  top: 0; /* Stay at the top */
-  left: 0;
-  background-color: #111; /* Black*/
-  overflow-x: hidden; /* Disable horizontal scroll */
-  padding-top: 60px; /* Place content 60px from the top */
-  transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
-
-/* The navigation menu links */
-.sidenav a {
-  padding: 8px 8px 8px 32px;
-  text-decoration: none;
-  font-size: 25px;
-  text-align: left;
-  color: #818181;
-  display: block;
-  transition: 0.3s;
-}
-
-/* When you mouse over the navigation links, change their color */
-.sidenav a:hover {
-  color: #f1f1f1;
-}
-
-/* Position and style the close button (top right corner) */
-.sidenav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-}
-
-/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
-#main {
-  transition: margin-left .5s;
-  padding: 20px;
-}
-
-/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-
-.gg-menu-grid-r {
-  box-sizing: border-box;
-  position: relative;
-  display: block;
-  transform: scale(var(--ggs,2));
-  width: 16px;
-  height: 16px;
-  float: right;
-  margin: 30px 24px;
- }
- 
- .gg-menu-grid-r::before {
-  content: "";
-  display: block;
-  box-sizing: border-box;
-  position: absolute;
-  width: 4px;
-  height: 4px;
-  background: currentColor;
-  box-shadow:
-  0 6px 0,
-  6px 6px 0,
-  12px 6px 0,
-  6px 12px 0,
-  12px 12px 0,
-  6px 0 0,
-  12px 0 0,
-  0 12px 0
-  ;
- } 
-
- .startbutton {
-  display: inline;
-  text-align: center;
-  border-radius: 4px;
-  background-color: #1e69f4;
-  border: none;
-  color: #FFFFFF;
-  font-size: 20px;
-  padding: 20px;
-  max-width: 400px;
-  transition: all 0.5s;
-  cursor: pointer;
-  margin: auto;
-  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1); /* This adds a shadow */
-}
-
-.startbutton span {
-  cursor: pointer;
-  display: inline-block;
-  position: relative;
-  transition: 0.5s;
-}
-
-.startbutton span:after {
-  content: '\00bb';
-  position: absolute;
-  opacity: 0;
-  top: 0;
-  right: -20px;
-  transition: 0.5s;
-}
-
-.startbutton:hover span {
-  padding-right: 25px;
-}
-
-.startbutton:hover span:after {
-  opacity: 1;
-  right: 0;
-}
-
-@media only screen and (max-width: 900px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 1fr));
-    grid-gap: 15px;
-    grid-row-gap: 25px;
-    margin: 20px auto;
-    max-width: 800px; /* Added to limit the maximum width of the grid */
-  }
-}
-
-@media only screen and (max-width: 700px) {
-
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    grid-gap: 15px;
-    grid-row-gap: 25px;
-    margin: 20px auto;
-    max-width: 800px; /* Added to limit the maximum width of the grid */
-  }
-  header h1 {
-    text-align: center;
-    position: flex;
-    width: 100%;
-    top: 50%;
-    margin: auto;
-    font-size: 5vw;
-    /*transform: translateY(-150%);*/
-    
-  }
-  header h2 {
-    text-align: center;
-    position: flex;
-    width: 100%;
-    top: 50%;
-    margin: auto;
-    font-weight:normal;
-    font-size: 4vw;
-  }
-    /*transform: translateY(-30%);*/
-  .weatherSmall{
-    max-height: 483px;
-    padding: 8.8px 7.92px;
-  }
-  img.logoH {
-    float: left;
-    font-weight: bold;
+header {
     display: flex;
-    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(245, 243, 243);
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* slight box shadow */
+}
+.header-section {
+    flex: 1;
+}
+.header-section h2 {
+    text-align: left; /* Left text horizontally */
+    float: left;
+    margin: 10;
+    height: 100%;
+}
+
+img.logo_H {
+    float: left;
+    height: 80px;
   }
+
+.header-section:nth-child(2) {
+    text-align: center;
+    flex: 2.5; /* 60% of the width */
+
 }
 
-.wrapperkeltbray{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 5px 0px;
-  overflow: hidden;
-  width: 100%;
-  max-width: 840px;
-  margin: auto;
+.header-section:first-child,
+.header-section:last-child {
+    flex: 1.5; /* 20% of the width each */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+
 }
 
-.columnkel {
-  flex: 1;
-  text-align: center;
-  vertical-align: middle;
+/* Additional styling */
+h1, h3 {
+    margin: 0;
+}
+.form-container {
+    background-color: #FAFAFA;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* slight box shadow */
+    width: 90%; /* Adjust the width of the container */
+    margin: 0 auto; /* Center the container */
+    margin-top: 20px;
 }
 
-.columnkel.left {
-  flex-basis: 33%;
-  max-width: 30%;
+.form-group {
+    margin-bottom: 20px;
 }
 
-.columnkel.center {
-  flex-basis: 33%;
-  max-width: 20%;
-  border-radius: 180px;
-  padding: 10px;
+label {
+    display: block;
 }
 
-.columnkel.right {
-  flex-basis: 33%;
-  max-width: 30%;
+/* Style for the text input */
+input[type="text"] {
+    width: calc(100% - 20px); /* 100% minus the padding */
+    padding: 10px;
+    border: none;
+    border-bottom: 2px solid #ccc;
+    background-color: transparent;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
 }
 
-#overlay {
-  position: fixed;
-  display: none;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0,0,0,0.5);
-  z-index: 2;
-  cursor: pointer;
+input[type="text"]:focus {
+    border-color: #4CAF50; /* Green */
 }
 
-fa fa-close{
+input[type="text"]::placeholder {
+    color: #aaa;
+}
+
+/* Styles for the select dropdowns */
+select {
+    width: calc(100% - 20px); /* 100% minus the padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    background-image: linear-gradient(45deg, transparent 50%, #ccc 50%), linear-gradient(135deg, #ccc 50%, transparent 50%);
+    background-position: calc(100% - 10px) calc(1em + 2px), calc(100% - 15px) calc(1em + 2px);
+    background-size: 5px 5px, 5px 5px;
+    background-repeat: no-repeat;
+}
+
+/* Style for the progress bar */
+progress {
+    width: calc(100% - 20px); /* 100% minus the padding */
+    height: 20px;
+    appearance: none;
+    border: none;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+progress::-webkit-progress-value {
+    background-color: #4CAF50; /* Green */
+    border-radius: 10px;
+    animation: progress-animation 1s ease-out forwards; /* Animation */
+}
+
+@keyframes progress-animation {
+    from { width: 0%; }
+}
+
+.container {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    
+    width: 100%;
+  }
   
+  .progress-bar__container {
+    width: 100%;
+    height: 2rem;
+    border-radius: 2rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+    will-change: transform;
+    box-shadow: 0 0 5px #5192e7;
+  }
+  .progress-bar-Sub__container {
+    width: 100%;
+    height: .5rem;
+    border-radius: .5rem;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s;
+    will-change: transform;
+    box-shadow: 0 0 5px #5192e7;
+  }
+  
+  .progress-bar-Main, .progress-bar-Sub {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background-color: #5f93f3;
+    top:0;
+    bottom: 0;
+    left: -100%;
+    border-radius: inherit;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    color: white;
+    font-family: sans-serif;
+    margin: 0 auto;
+  }
+
+  
+  .progress-bar-Main__text, .progress-bar-Sub__text {
+    display: none;
+  }
+
+
+
+/* Set width of inputs and progress bar */
+select, progress {
+width: calc(100% - 20px); /* 100% minus the padding */
 }
+
+/* Style for the extracted IDs */
+.extracted-ids {
+    display: none; /* Initially hidden */
+    margin-top: 10px;
+    font-size: 14px;
+    color: #888;
+}
+/* Style for the submit button */
+input[type="submit"] {
+    background-color: #4CAF50; /* Green */
+    font-size: 20px;
+    color: white;
+    padding: 12px 0; /* Adjust vertical padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%; /* Set width to 50% */
+    display: block; /* Make it a block element */
+    margin: 0 auto; /* Center horizontally */
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+input[type="submit"]:active {
+    background-color: #3e8e41; /* Slightly darker green */
+}
+
+/* Style for the submit button */
+.submitButton {
+    background-color: #4CAF50; /* Green */
+    font-size: 20px;
+    color: white;
+    padding: 12px 0; /* Adjust vertical padding */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 50%; /* Set width to 50% */
+    display: block; /* Make it a block element */
+    margin: 15 auto; /* Center horizontally */
+    transition: background-color 0.3s;
+}
+
+.submitButton:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+.submitButton:active {
+    background-color: #3e8e41; /* Slightly darker green */
+}
+
+
+   
+
+/* Styles for Drag and drop */
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+    }
+
+    #drop-area.hover {
+    border-color: #3b97e3;
+    }
+
+    #drop-area.uploaded {
+    background-color: #f0f0f0;
+    }
+
+    #drop-area p {
+    margin: 0;
+    color: #666;
+    }
+
+    #fileInput {
+    display: none;
+    }
+
+    .file-icon {
+    font-size: 48px;
+    margin-bottom: 10px;
+    color: #3b97e3;
+    }
+
+    #file-info {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin: auto;
+        margin-top: 10px;
+      }
+      
+      .button:hover {
+        background-color: #45a049;
+      }
+
+      ul li {
+        list-style: none;
+    }
+    .form-label {
+        margin: 10 0;
+    }

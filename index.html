@@ -2,131 +2,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Assets/css/main.css">
-    <link rel="stylesheet" href="./Assets/css/largegrid.css">
-    <link rel="stylesheet" href="./Assets/css/forms.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="icon" href="./Assets/media/Keltbray-logo_single.png" type="image/x-icon">
-    <link href="https://unpkg.com/css.gg@2.0.0/icons/css/menu.css" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./js/formsubmission.js"></script>
-    <script src="./js/getinfo.js"></script>
-    <script src="./js/getACCData.js"></script>
+    <script src="js/getACCData.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+    <link rel="icon" href="./assets/media/Keltbray-logo_single.png" type="image/x-icon">
 
-
-    <title>Peterhead ACC - File Name Generator</title>
-
-
+    <title>Digital Delivery Hub - Peterhead ACC File Name Generator</title>
 </head>
-<body class="container">
-  <header class="wrapperheader">
-    <div class="colheader">
-      <div class="column left">
-        <img alt="" onclick="openNav()" id="headerlogo" class="logoH" src="./Assets/media/Keltbray logo_Main_min clear space.png">
-      </div>
-      <div class="column center">
 
-        <h1>Peterhead ACC</h1>
+<body>
 
-        <h2>File Name Generator</h2>
-      </div>
-      <div class="column right">
-        <i onclick="openNav()" class="gg-menu-grid-r"></i>
-      </div>
-        <!-- Side Bar -->
+    <header>
+        <div class="header-section">
+            <img alt="" id="headerlogo" class="logo_H" src="./assets/media/Keltbray-logo_single.png">
+            <h2>Keltbray <br>DD Hub</h2>
+        </div>
+        <div class="header-section">
+            <h1>Peterhead ACC File Name Generator</h1>
+        </div>
+        <div class="header-section">
+            <h3></h3>
+        </div>
+    </header>
 
-    </div>
+    <main>
 
-  </header>
+            <form class="" id="ACC_FileNo_Generator" >
+                <div class="form-group">
+                  <ul class="form-container">
+                    <!-- Project PIN Input-->
+                    <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Contractor Codes </label>
+                      <div id="cid_5" class="form-input-wide" data-layout="full">
+                        <select class="form-dropdown" id="ProjectPin_input" name="" data-component="ProjectRole" aria-label="Project PIN">
+                        </select> </div>
+                  </li>
+                  <!-- Spatial Input-->
+                  <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Location Code </label>
+                  <div id="cid_5" class="form-input-wide" data-layout="full">
+                    <select class="form-dropdown" id="Spatial_input" name="" data-component="ProjectRole" aria-label="Spatial">
+                    </select> </div>
+                  </li>
+                  <!-- Function Input-->
+                  <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Function </label>
+                  <div id="cid_5" class="form-input-wide" data-layout="full">
+                    <select class="form-dropdown" id="Function_input" name="" data-component="ProjectRole" aria-label="Function">
+                    </select> </div>
+                  </li>
+                  <!-- Discipline Input-->
+                  <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Doc-Dwg Type </label>
+                    <div id="cid_5" class="form-input-wide" data-layout="full">
+                      <select class="form-dropdown" id="DocType_input" name="" data-component="ProjectRole" aria-label="Discipline">
+                      </select> </div>
+                  </li>
+                  <!-- Discipline Input-->
+                  <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Subject &amp; Discipline Code </label>
+                  <div id="cid_5" class="form-input-wide" data-layout="full">
+                    <select class="form-dropdown" id="Discipline_input" name="" data-component="ProjectRole" aria-label="Discipline">
+                    </select> </div>
+                  </li>
+                  <!-- Originator Input-->
+                  <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Originator Code </label>
+                      <div id="cid_5" class="form-input-wide" data-layout="full">
+                        <select class="form-dropdown" id="Originator_input" name="" data-component="ProjectRole" aria-label="Originator">
+                        </select> </div>
+                    </li>
 
-  <section class="formcontainer">
-    <form class="jotform-form" id="ACC_FileNo_Generator" >
-     <div class="form-all">
-       <ul class="form-section page-section">
-         <li id="cid_1" class="form-input-wide" data-type="control_head">
-           <div class="form-header-group  header-large">
-             <div class="header-text httal htvam">
-               <h1 id="header_1" class="form-header" data-component="header">ACC File Name Generator</h1>
-             </div>
-           </div>
-         </li>
-        <!-- Project PIN Input-->
-        <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Contractor Codes </label>
-            <div id="cid_5" class="form-input-wide" data-layout="full">
-              <select class="form-dropdown" id="ProjectPin_input" name="" data-component="ProjectRole" aria-label="Project PIN">
-              </select> </div>
-        </li>
-        <!-- Spatial Input-->
-        <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Location Code </label>
-        <div id="cid_5" class="form-input-wide" data-layout="full">
-          <select class="form-dropdown" id="Spatial_input" name="" data-component="ProjectRole" aria-label="Spatial">
-          </select> </div>
-        </li>
-        <!-- Function Input-->
-        <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Function </label>
-        <div id="cid_5" class="form-input-wide" data-layout="full">
-          <select class="form-dropdown" id="Function_input" name="" data-component="ProjectRole" aria-label="Function">
-          </select> </div>
-        </li>
-        <!-- Discipline Input-->
-        <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Doc-Dwg Type </label>
-          <div id="cid_5" class="form-input-wide" data-layout="full">
-            <select class="form-dropdown" id="DocType_input" name="" data-component="ProjectRole" aria-label="Discipline">
-            </select> </div>
-        </li>
-        <!-- Discipline Input-->
-        <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Subject &amp; Discipline Code </label>
-        <div id="cid_5" class="form-input-wide" data-layout="full">
-          <select class="form-dropdown" id="Discipline_input" name="" data-component="ProjectRole" aria-label="Discipline">
-          </select> </div>
-        </li>
-         <!-- Originator Input-->
-         <li class="form-line" data-type="control_dropdown" id="id_5"><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Originator Code </label>
-             <div id="cid_5" class="form-input-wide" data-layout="full">
-               <select class="form-dropdown" id="Originator_input" name="" data-component="ProjectRole" aria-label="Originator">
-               </select> </div>
-          </li>
+                    <li class="form-line" ><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Sequence Code and Sheet Numbers will be auto generated </label>
+                      <div class="form-input-wide" data-layout="full">
+                        </div>
+                  </li>
 
-          <li class="form-line" ><label class="form-label form-label-top form-label-auto" id="label_5" for="input_5" aria-hidden="false"> Sequence Code and Sheet Numbers will be auto generated </label>
-            <div class="form-input-wide" data-layout="full">
-              </div>
-         </li>
+                  <!-- Generate Button -->
+                  <li id="cid_2" class="form-input-wide" data-layout="full">
+                      <div data-align="auto" class="form-buttons-wrapper2 form-buttons-auto   jsTest-button-wrapperField">
+                        <button type="button" id="generate_btn"  class="submitButton" onclick="generateDocName()">Generate File Name</button>
+                      </div>
+                  </li>
+                  <!-- Document Number-->
+                  <li class="form-line" data-type="control_email" id="id_7"><label class="form-label form-label-top form-label-auto" id="label_7" for="input_7" aria-hidden="false"> Generated File Name </label>
+                    <input type="text" id="DocNumber" name="DocNumber" class="form-textbox" size="15" value="" data-component="last" aria-labelledby="label_6 sublabel_6_last" readonly>
 
-         <!-- Generate Button -->
-         <li id="cid_2" class="form-input-wide" data-layout="full">
-             <div data-align="auto" class="form-buttons-wrapper2 form-buttons-auto   jsTest-button-wrapperField">
-               <button type="button" id="generate_btn"  class="form-submit-button submit-button jf-form-buttons jsTest-submitField" onclick="generateDocName()">Generate File Name</button>
-             </div>
-         </li>
-         <!-- Document Number-->
-         <li class="form-line" data-type="control_email" id="id_7"><label class="form-label form-label-top form-label-auto" id="label_7" for="input_7" aria-hidden="false"> Generated File Name </label>
-          <input type="text" id="DocNumber" name="DocNumber" class="form-textbox" size="15" value="" data-component="last" aria-labelledby="label_6 sublabel_6_last" readonly>
+                    </li>
+                  </ul>
+                </div>
+              </form>
 
-          </li>
-       </ul>
-     </div>
-   </form>
-</section>
+    </main>
+    <script>
 
-  <script>
-
-    
-
-  function on() {
-  document.getElementById("overlay").style.display = "block";
-  }
-  function off() {
-    document.getElementById("overlay").style.display = "none";
-  }
-
-
-  </script>
-
-<div class="addeddepth"></div>
-<footer class="wrapperfooter">
-<img alt="" class="logoF" src="./Assets/media/Keltbray logo_Wht_Wht box_min clear space.png">
-<h2>Infrastructure PMO</h2>
-</footer>
+    </script>
 </body>
-
 </html>

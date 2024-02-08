@@ -83,15 +83,16 @@ function generateDocName(){
 
     console.log(DocType.options[DocType.selectedIndex].text)
     var vDocType = DocType.options[DocType.selectedIndex].text
-
+    console.log(PartialMatch2)
+    console.log(vDocType)
     if (PartialMatch2.length >=1) {
         if (vDocType.includes("dwg")) {
             console.log(`Partial match '${varDocNumber_noNum}' found in the array.`);
-            const partialMatchesArray = PartialMatch.map(match => match.replace(/\.[^.]+$/, ''));
-            console.log('Partial matches array:', partialMatchesArray);
+            const partialMatchesArray2 = PartialMatch2.map(match => match.replace(/\.[^.]+$/, ''));
+            console.log('Partial matches array:', partialMatchesArray2);
 
             // Extract the numbers from the filenames
-            const numbers = partialMatchesArray.map(filename => {
+            const numbers = partialMatchesArray2.map(filename => {
                 const match = filename.match(/(\d+)$/);
                 return match ? parseInt(match[1], 10) : null;
             });
@@ -109,13 +110,18 @@ function generateDocName(){
 
             newDrawingNumber = paddedNextNumber;
 
-    } }else if (vDocType.includes("Doc")){
+    }else if (vDocType.includes("Doc")){
         console.log(`No partial match '${varDocNumber_noNum}' found in the array.`);
         newDrawingNumber = "00"
-    
-    }else{
-        newDrawingNumber = "01"
     }
+    else{
+        newDrawingNumber = "01"
+    }}else if (vDocType.includes("dwg")) {
+        newDrawingNumber = "01"
+    }else if (vDocType.includes("Doc")) {
+        newDrawingNumber = "00"
+    }
+
 
     const varDocNumber_Full = varDocNumber_noNum+"-"+newNumber+"-"+newDrawingNumber
     console.log('New Document Number: ', varDocNumber_Full);
