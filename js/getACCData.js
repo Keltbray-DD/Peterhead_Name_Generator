@@ -9,7 +9,6 @@ const folders =[
     "urn:adsk.wipemea:fs.folder:co.1U7RIHcTQhK0MuiFVKmBBw", // 0F.CLIENT_SHARED
     //"urn:adsk.wipemea:fs.folder:co.fI4I2_NUQCab66s_Ifswow", // 0G.PUBLISHED
     "urn:adsk.wipemea:fs.folder:co.UuWWDGCXTsOeTF98U6pIuw", // 0H.ARCHIVED
-
 ]
 
 const projectID = "e119c525-f9f1-44a2-86db-9e4bb07a18fa";
